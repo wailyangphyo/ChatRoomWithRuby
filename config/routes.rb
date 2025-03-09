@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root "pages#home"
   resources :messages, only: [:create, :destroy]
   devise_for :users, controllers: {
-    registration: 'users/registrations'
+    registrations: 'users/registrations',
   }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

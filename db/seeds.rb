@@ -8,7 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 User.create(username: "wphyo", email: "wphyo@mail.com", password: "password", password_confirmation: "password")
-User.create(username: "williamp", email: "wiliamp@mail.com", password: "password", password_confirmation: "password")
+User.create(username: "john", email: "john@mail.com", password: "password", password_confirmation: "password")
 50.times do
     Message.create(body: Faker::Lorem.sentence(word_count: 10), user_id: rand(1..2))
 end
