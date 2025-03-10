@@ -8610,8 +8610,7 @@ var chat_controller_default = class extends Controller {
       messageBody.classList.add("bg-themeColorMain", "text-textColorSecondary");
     } else {
       messageBody.classList.add(
-        "border",
-        "border-themeColorMain",
+        "bg-themeColorMain",
         "text-textColorMain"
       );
     }

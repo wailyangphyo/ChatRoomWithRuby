@@ -1,13 +1,9 @@
 <%= turbo_frame_tag dom_id(message) do %>
-  <div class="message" data-user-id="<%= message.user.id %>">
-    <div class="message__header">
-      <div>
-        <div class="message__author">
-          <%= message.user.username %>
-        </div>
-        <div class="message__timestamp">
-          <%= message.created_at.strftime("%H:%M:%S") %>
-        </div>
+  <div class="message p-1" data-user-id="<%= message.user.id %>">
+    <div class="rounded" style="background-color:rgb(54, 63, 104);">
+    <div class="message__header" style="background-color:rgb(27, 39, 100);">
+      <div class="message__timestamp text-center">
+        <%= message.created_at.strftime("%I:%M %p") %>
       </div>
       <%= turbo_frame_tag [dom_id(message), "controls"] do %>
         <% if display_controls %>
@@ -15,8 +11,16 @@
         <% end %>
       <% end %>
     </div>
-    <div class="message__body">
-      <%= message.body %>
+    <div class="message__body container ms-0" >
+      <div class="row">
+        <div class="col-sm-1 message__author d-inline-flex p-1 rounded item" style="background-color:rgb(68, 107, 190);">
+          <%= message.user.username %> 
+        </div>
+        <div class="col-sm-11 d-inline-flex p-1 rounded item">
+          <%= message.body %>
+        </div>
+      </div>
+    </div>
     </div>
   </div>
 <% end %>

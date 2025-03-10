@@ -1,7 +1,7 @@
 <%= turbo_stream_from "messages" %>
-<div data-controller="chat" 
+<div class="container-fluid"  data-controller="chat" 
     data-chat-current-user-id-value="<%= current_user.id %>">
-  <div id="messages">
+  <div id="messages" style="background-color: #04011f; color:#eee;">
     <% @messages.each do |message| %>
       <%= render partial: "messages/message", 
       locals: { 

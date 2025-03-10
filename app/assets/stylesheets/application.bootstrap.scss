@@ -1,11 +1,17 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 
-:root{
+:root {
     --themeColorMain: #1aa8db;
     --themeColorSecondary: #d23828;
 }
-* {
-    background-color: #04011f;
-    color: #eee
-}
+// * {
+//     background-color: #04011f;
+//     color: #eee
+// }
+
+.item {
+    width: fit-content;
+    padding: 5px;
+    margin-bottom: 1em;
+  }
