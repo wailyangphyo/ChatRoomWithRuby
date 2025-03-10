@@ -5,7 +5,6 @@ export default class extends Controller {
   connect() {}
 
   clearInput() {
-    console.log("resetting form");
     this.inputTarget.value = "";
   }
 }

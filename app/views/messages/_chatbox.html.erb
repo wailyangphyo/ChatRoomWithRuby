@@ -1,5 +1,5 @@
 <%= turbo_stream_from "messages" %>
-<div class="container-fluid"  data-controller="chat" 
+<div data-controller="chat" style="overflow-y: auto;"
     data-chat-current-user-id-value="<%= current_user.id %>">
   <div id="messages" style="background-color: #04011f; color:#eee;">
     <% @messages.each do |message| %>

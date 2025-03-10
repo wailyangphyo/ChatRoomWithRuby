@@ -18,3 +18,8 @@
 .vw70 {
     width: 60vw;
 }
+
+.reverse-column {
+    display: flex;
+    flex-direction: column-reverse; /* Reverses the order of items */
+}
